@@ -1,6 +1,6 @@
 # Contributing to Portfolio Website
 
-First off, thank you for considering contributing to this project! 🎉
+First off, thank you for considering contributing to this project! ðŸŽ‰
 
 It's people like you that make this portfolio template better for everyone. We welcome contributions from developers of all skill levels.
 
@@ -17,13 +17,13 @@ It's people like you that make this portfolio template better for everyone. We w
 
 ## Code of Conduct
 
-This project and everyone participating in it is governed by our [Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to [satyasubudhi089@gmail.com](mailto:satyasubudhi089@gmail.com).
+This project and everyone participating in it is governed by our [Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to [70812345pratik@gmail.com](mailto:70812345pratik@gmail.com).
 
 ## How Can I Contribute?
 
-### 🐛 Reporting Bugs
+### ðŸ› Reporting Bugs
 
-Before creating bug reports, please check the [existing issues](https://github.com/satya00089/portfolio/issues) to avoid duplicates.
+Before creating bug reports, please check the [existing issues](https://github.com/pratik-70/portfolio/issues) to avoid duplicates.
 
 When you create a bug report, include as many details as possible:
 
@@ -61,9 +61,9 @@ If applicable, add screenshots.
 - Node Version: [e.g., 18.17.0]
 ```
 
-### 💡 Suggesting Enhancements
+### ðŸ’¡ Suggesting Enhancements
 
-Enhancement suggestions are tracked as [GitHub issues](https://github.com/satya00089/portfolio/issues).
+Enhancement suggestions are tracked as [GitHub issues](https://github.com/pratik-70/portfolio/issues).
 
 When suggesting an enhancement:
 
@@ -73,7 +73,7 @@ When suggesting an enhancement:
 - **List examples** of how it would be used
 - **Include mockups or examples** if applicable
 
-### 🎨 Design Improvements
+### ðŸŽ¨ Design Improvements
 
 We welcome design suggestions! If you have ideas for:
 
@@ -84,7 +84,7 @@ We welcome design suggestions! If you have ideas for:
 
 Please open an issue with mockups or detailed descriptions.
 
-### 📝 Documentation
+### ðŸ“ Documentation
 
 Improvements to documentation are always welcome:
 
@@ -93,7 +93,7 @@ Improvements to documentation are always welcome:
 - Improve README or Wiki
 - Add code comments
 
-### 🚀 Code Contributions
+### ðŸš€ Code Contributions
 
 Want to write code? Great! Here's how:
 
@@ -125,7 +125,7 @@ cd portfolio
 3. **Add upstream remote:**
 
 ```bash
-git remote add upstream https://github.com/satya00089/portfolio.git
+git remote add upstream https://github.com/pratik-70/portfolio.git
 ```
 
 4. **Install dependencies:**
@@ -209,13 +209,13 @@ git push origin feature/your-feature-name
 
 ### Before Submitting
 
-- ✅ Code follows the style guidelines
-- ✅ Self-review of your code completed
-- ✅ Comments added for complex code
-- ✅ Documentation updated if needed
-- ✅ No new warnings or errors
-- ✅ Changes tested locally
-- ✅ Commit messages follow guidelines
+- âœ… Code follows the style guidelines
+- âœ… Self-review of your code completed
+- âœ… Comments added for complex code
+- âœ… Documentation updated if needed
+- âœ… No new warnings or errors
+- âœ… Changes tested locally
+- âœ… Commit messages follow guidelines
 
 ### Submitting a Pull Request
 
@@ -268,7 +268,7 @@ Add screenshots to demonstrate the changes
 1. Maintainers will review your PR
 2. Feedback may be provided
 3. Make necessary changes
-4. Once approved, your PR will be merged! 🎉
+4. Once approved, your PR will be merged! ðŸŽ‰
 
 ## Style Guidelines
 
@@ -283,7 +283,7 @@ Add screenshots to demonstrate the changes
 **Example:**
 
 ```typescript
-// ✅ Good
+// âœ… Good
 interface SkillCircleProps {
   skillName: string;
   proficiency: number;
@@ -302,7 +302,7 @@ export const SkillCircle: React.FC<SkillCircleProps> = ({
   );
 };
 
-// ❌ Avoid
+// âŒ Avoid
 export const SkillCircle = (props: any) => {
   return <div>{props.n}</div>;
 };
@@ -318,10 +318,10 @@ export const SkillCircle = (props: any) => {
 **Example:**
 
 ```tsx
-// ✅ Good
+// âœ… Good
 <div className="flex flex-col items-center justify-center gap-4 p-6 bg-white dark:bg-gray-900 rounded-lg shadow-lg">
 
-// ❌ Avoid
+// âŒ Avoid
 <div className="flex bg-white p-6 flex-col rounded-lg items-center gap-4 shadow-lg dark:bg-gray-900 justify-center">
 ```
 
@@ -333,9 +333,9 @@ export const SkillCircle = (props: any) => {
 
 ```
 components/
-  ├── shared/          # Shared components
-  ├── resume/          # Resume-specific
-  └── ComponentName.tsx
+  â”œâ”€â”€ shared/          # Shared components
+  â”œâ”€â”€ resume/          # Resume-specific
+  â””â”€â”€ ComponentName.tsx
 ```
 
 ### Import Order
@@ -347,7 +347,7 @@ components/
 5. Assets
 
 ```typescript
-// ✅ Good
+// âœ… Good
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
@@ -415,10 +415,10 @@ git commit -m "refactor(portfolio): extract project modal logic"
 
 ### Getting Help
 
-- 📖 Read the [README](README.md) and [Wiki](WIKI.md)
-- 🔍 Search [existing issues](https://github.com/satya00089/portfolio/issues)
-- 💬 Ask questions in [Discussions](https://github.com/satya00089/portfolio/discussions)
-- 📧 Email: [satyasubudhi089@gmail.com](mailto:satyasubudhi089@gmail.com)
+- ðŸ“– Read the [README](README.md) and [Wiki](WIKI.md)
+- ðŸ” Search [existing issues](https://github.com/pratik-70/portfolio/issues)
+- ðŸ’¬ Ask questions in [Discussions](https://github.com/pratik-70/portfolio/discussions)
+- ðŸ“§ Email: [70812345pratik@gmail.com](mailto:70812345pratik@gmail.com)
 
 ### Recognition
 
@@ -438,6 +438,6 @@ Don't hesitate to ask! We're here to help:
 
 ---
 
-Thank you for contributing! 🙏
+Thank you for contributing! ðŸ™
 
-**Happy Coding! 💻✨**
+**Happy Coding! ðŸ’»âœ¨**

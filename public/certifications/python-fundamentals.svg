@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Python Fundamentals Certificate</title>
+  <desc id="desc">Certificate preview for Python Fundamentals for Beginners</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1f2937" />
+      <stop offset="100%" stop-color="#111827" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)" />
+  <path d="M0 540 L1200 460 L1200 675 L0 675 Z" fill="#2563eb" opacity="0.18" />
+  <rect x="70" y="70" width="1060" height="535" rx="24" fill="#0f172a" stroke="#374151" stroke-width="2" />
+  <text x="120" y="220" fill="#f3f4f6" font-size="46" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Python Fundamentals</text>
+  <text x="120" y="285" fill="#e5e7eb" font-size="36" font-family="Segoe UI, Arial, sans-serif" font-weight="600">for Beginners</text>
+  <text x="120" y="370" fill="#9ca3af" font-size="28" font-family="Segoe UI, Arial, sans-serif">Issuer: Great Learning</text>
+  <text x="120" y="430" fill="#9ca3af" font-size="26" font-family="Segoe UI, Arial, sans-serif">Date: Dec 2023</text>
+</svg>

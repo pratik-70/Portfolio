@@ -21,7 +21,7 @@ Please **do not** create a public GitHub issue for security vulnerabilities. Thi
 
 Send a detailed report to:
 
-**Email:** [satyasubudhi089@gmail.com](mailto:satyasubudhi089@gmail.com)
+**Email:** [70812345pratik@gmail.com](mailto:70812345pratik@gmail.com)
 
 **Subject:** `[SECURITY] Brief description of the vulnerability`
 
@@ -89,12 +89,12 @@ We take security reports seriously and will respond according to the following t
 
 After you submit a report:
 
-1. ✅ **Acknowledgment** - We'll confirm receipt of your report
-2. ✅ **Assessment** - We'll evaluate the severity and impact
-3. ✅ **Updates** - We'll keep you informed of our progress
-4. ✅ **Fix** - We'll develop and test a patch
-5. ✅ **Release** - We'll deploy the fix and notify users
-6. ✅ **Credit** - We'll acknowledge your contribution (if you wish)
+1. âœ… **Acknowledgment** - We'll confirm receipt of your report
+2. âœ… **Assessment** - We'll evaluate the severity and impact
+3. âœ… **Updates** - We'll keep you informed of our progress
+4. âœ… **Fix** - We'll develop and test a patch
+5. âœ… **Release** - We'll deploy the fix and notify users
+6. âœ… **Credit** - We'll acknowledge your contribution (if you wish)
 
 ## Security Best Practices for Users
 
@@ -151,10 +151,10 @@ After you submit a report:
 
 This is a **static portfolio website** that runs entirely in the browser:
 
-- ✅ No server-side code
-- ✅ No database connections
-- ✅ No user authentication
-- ✅ No sensitive data storage
+- âœ… No server-side code
+- âœ… No database connections
+- âœ… No user authentication
+- âœ… No sensitive data storage
 
 ### Third-Party Dependencies
 
@@ -216,10 +216,10 @@ Contributors who report valid security vulnerabilities will be:
 
 For security concerns, contact:
 
-**Satya Subudhi**  
-📧 Email: [satyasubudhi089@gmail.com](mailto:satyasubudhi089@gmail.com)  
-🐙 GitHub: [@satya00089](https://github.com/satya00089)
+**Pratik Kumar**  
+ðŸ“§ Email: [70812345pratik@gmail.com](mailto:70812345pratik@gmail.com)  
+ðŸ™ GitHub: [@pratik-70](https://github.com/pratik-70)
 
 ---
 
-**Thank you for helping keep this project secure!** 🔒
+**Thank you for helping keep this project secure!** ðŸ”’

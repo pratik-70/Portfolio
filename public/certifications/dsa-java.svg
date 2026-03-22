@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">DSA using Java Certificate</title>
+  <desc id="desc">Certificate preview for Data Structure and Algorithm using Java Programming</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)" />
+  <rect x="70" y="70" width="1060" height="535" rx="24" fill="#0b1220" stroke="#334155" stroke-width="2" />
+  <text x="120" y="220" fill="#e2e8f0" font-size="44" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Data Structure and Algorithm</text>
+  <text x="120" y="285" fill="#cbd5e1" font-size="36" font-family="Segoe UI, Arial, sans-serif" font-weight="600">Using Java Programming</text>
+  <text x="120" y="370" fill="#94a3b8" font-size="28" font-family="Segoe UI, Arial, sans-serif">Issuer: Cipher School</text>
+  <text x="120" y="430" fill="#94a3b8" font-size="26" font-family="Segoe UI, Arial, sans-serif">Date: Jul 2025</text>
+</svg>

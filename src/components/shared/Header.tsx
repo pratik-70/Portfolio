@@ -109,9 +109,16 @@ export const Header: React.FC<{ links?: NavLink[]; onTryCLI?: () => void }> = ({
           opacity: overlayOpacity,
         }}
       />
-      <div className="relative max-w-6xl mx-auto px-6 py-4 flex items-center justify-end">
+      <div className="relative max-w-6xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
+        <div className="text-lg sm:text-xl md:text-2xl font-semibold text-[var(--text)] tracking-wide whitespace-nowrap">
+          {"</> Pratik"}
+        </div>
+
         {/* Right: nav + theme + Try CLI */}
-        <nav aria-label="Primary" className="relative flex items-center gap-3">
+        <nav
+          aria-label="Primary"
+          className="topbar-hover-glow relative flex items-center gap-3"
+        >
           <div className="relative hidden sm:flex gap-4">
             {links.map((l) => {
               const isActive = active === l.href;

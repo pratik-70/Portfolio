@@ -96,6 +96,7 @@ export type Project = {
   description?: string; // longer description, markdown ok
   tags?: string[]; // technologies / categories
   image?: string; // preview image path
+  video?: string; // optional local/remote preview video
   href?: string; // live url (for playground)
   links?: ProjectLink[]; // alternate links
   date?: DateRange | string;
@@ -131,8 +132,32 @@ export type Certification = {
   name: string; // "AWS Certified Developer"
   issuer?: string; // "Amazon"
   date?: DateRange | string;
+  image?: string; // preview image path
   url?: string;
   description?: string;
+};
+
+export type Training = {
+  id?: string;
+  title: string;
+  provider?: string;
+  date?: DateRange | string;
+  image?: string;
+  summary?: string;
+  skills?: string[];
+  url?: string;
+};
+
+export type Hackathon = {
+  id?: string;
+  name: string;
+  organizer?: string;
+  date?: DateRange | string;
+  image?: string;
+  result?: string;
+  summary?: string;
+  tech?: string[];
+  url?: string;
 };
 
 /* ---------- Resume root type ---------- */
@@ -158,6 +183,8 @@ export type Portfolio = {
     volunteer?: Role[];
     languages?: { name: string; level?: string }[];
     interests?: string[]; // e.g. "astronomy, photography"
+    trainings?: Training[];
+    hackathons?: Hackathon[];
   };
 };
 

@@ -46,6 +46,11 @@ const animations = pathData.map((_, i) => ({
   initialProgress: (i * 5) % 100,
 }));
 
+// Render fewer beams to keep the background subtle.
+const visibleIndexes = pathData
+  .map((_, i) => i)
+  .filter((i) => i % 8 === 0);
+
 export const BackgroundBeams = React.memo(
   ({ className }: BackgroundBeamsProps) => {
     return (
@@ -64,10 +69,10 @@ export const BackgroundBeams = React.memo(
         >
           {/* Static faint paths for depth */}
           <g opacity="0.03">
-            {pathData.map((d, i) => (
+            {visibleIndexes.map((i) => (
               <path
                 key={`static-${i}`}
-                d={d}
+                d={pathData[i]}
                 stroke="white"
                 strokeWidth="0.5"
               />
@@ -75,10 +80,10 @@ export const BackgroundBeams = React.memo(
           </g>
 
           {/* Animated gradient beams */}
-          {pathData.map((d, i) => (
+          {visibleIndexes.map((i) => (
             <motion.path
               key={`beam-${i}`}
-              d={d}
+              d={pathData[i]}
               stroke={`url(#gradient-${i})`}
               strokeWidth="1"
               strokeLinecap="round"
@@ -97,7 +102,7 @@ export const BackgroundBeams = React.memo(
           ))}
 
           <defs>
-            {pathData.map((_, i) => (
+            {visibleIndexes.map((i) => (
               <linearGradient
                 key={`gradient-${i}`}
                 id={`gradient-${i}`}

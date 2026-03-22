@@ -55,13 +55,26 @@ export const ProjectCard: React.FC<{
                 <BsArrowUpRightCircleFill size={32} />
               </span>
             </button>
-            {project.image && (
+            {(project.video || project.image) && (
               <div className="w-full flex justify-center mb-4">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="rounded-lg border border-[var(--border)] w-full object-cover h-45"
-                />
+                {project.video ? (
+                  <video
+                    src={project.video}
+                    poster={project.image}
+                    className="rounded-lg border border-[var(--border)] w-full object-cover h-45"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="metadata"
+                  />
+                ) : (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="rounded-lg border border-[var(--border)] w-full object-cover h-45"
+                  />
+                )}
               </div>
             )}
             {/* Title + Description */}

@@ -299,6 +299,25 @@ body {
   }
 }
 
+.topbar-hover-glow::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 12px;
+  box-shadow: 0 0 0 0 transparent;
+  opacity: 0;
+  transition:
+    box-shadow 220ms ease,
+    opacity 220ms ease;
+  pointer-events: none;
+}
+
+.topbar-hover-glow:hover::after,
+.topbar-hover-glow:focus-within::after {
+  box-shadow: 0 10px 30px -12px var(--brand);
+  opacity: 0.95;
+}
+
 .btn-light-flare::after {
   content: "";
   position: absolute;

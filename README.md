@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS. Features an interactive project showcase, skills visualization, CLI-style resume, and smooth animations.
 
-🔗 **Live Demo**: [https://satya00089.github.io/portfolio](https://satya00089.github.io/portfolio)
+ðŸ”— **Live Demo**: [https://pratik-70.github.io/portfolio](https://pratik-70.github.io/portfolio)
 
 > Free, modern developer portfolio template with:
 >
@@ -11,13 +11,13 @@ A modern, responsive portfolio website built with React, TypeScript, and Tailwin
 > - Dark/light theme
 > - Markdown-powered project content
 
-## 📸 Preview
+## ðŸ“¸ Preview
 
 ![Home Preview](public/preview-home.gif)
 
 ![CLI Resume Preview](public/preview-cli.png)
 
-## ✨ Features
+## âœ¨ Features
 
 - **Interactive Portfolio**: Showcase your projects with modal views and detailed descriptions
 - **Dynamic Resume**: Interactive resume page with print functionality
@@ -30,20 +30,20 @@ A modern, responsive portfolio website built with React, TypeScript, and Tailwin
 - **Responsive Design**: Fully responsive across all device sizes
 - **Scroll Enhancements**: Progress bar and scroll-to-top functionality
 
-## 🚀 Use this as your own portfolio
+## ðŸš€ Use this as your own portfolio
 
 This repository is intended to be a ready-to-customize portfolio template. There are two easy ways to get started:
 
-### Option A — Use the GitHub "Use this template" button
+### Option A â€” Use the GitHub "Use this template" button
 
 1. On the GitHub page for this repo click the **"Use this template"** button
 2. Create a new repository under your account
 3. Clone your new repo locally and follow the quick-start checklist below
 
-### Option B — Clone directly
+### Option B â€” Clone directly
 
 ```bash
-git clone https://github.com/satya00089/portfolio.git my-portfolio
+git clone https://github.com/pratik-70/portfolio.git my-portfolio
 cd my-portfolio
 npm install
 npm run dev
@@ -51,7 +51,7 @@ npm run dev
 
 Quick start (do these first)
 
-- Open `src/config/portfolioData.ts` and replace the sample data with your name, bio, links, and projects — this is the single most important file to customize.
+- Open `src/config/portfolioData.ts` and replace the sample data with your name, bio, links, and projects â€” this is the single most important file to customize.
 - Replace social/profile links and contact details.
 - Update or remove example projects (the `projects` array) and add your screenshots or links.
 - (Optional) Add preview images in `public/` named `preview-home.png`, `preview-projects.png`, `preview-cli.png` so the GitHub template page renders them.
@@ -61,13 +61,13 @@ Why `src/config/portfolioData.ts`?
 
 All site content (projects, skills, education, experience, and basic profile info) is driven by `src/config/portfolioData.ts`. Editing that file is the fastest way to make this site yours.
 
-## ☁️ One-click Deploy
+## â˜ï¸ One-click Deploy
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/satya00089/portfolio)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/pratik-70/portfolio)
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/satya00089/portfolio)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/pratik-70/portfolio)
 
-## 🛠️ Tech Stack
+## ðŸ› ï¸ Tech Stack
 
 ### Core
 
@@ -90,24 +90,24 @@ All site content (projects, skills, education, experience, and basic profile inf
 - **React Scroll** - Smooth scrolling functionality
 - **GitHub Markdown CSS** - GitHub-style markdown styling
 
-## 📁 Project Structure
+## ðŸ“ Project Structure
 
 ```
 src/
-├── components/          # Reusable UI components
-│   ├── shared/         # Shared components (Header, Footer, etc.)
-│   └── resume/         # Resume-specific components
-├── pages/              # Page components
-│   ├── PortfolioPage.tsx
-│   └── ResumePage.tsx
-├── config/             # Configuration files
-│   └── portfolioData.ts
-├── context/            # React contexts (Theme)
-├── types/              # TypeScript type definitions
-└── assets/             # Static assets
+â”œâ”€â”€ components/          # Reusable UI components
+â”‚   â”œâ”€â”€ shared/         # Shared components (Header, Footer, etc.)
+â”‚   â””â”€â”€ resume/         # Resume-specific components
+â”œâ”€â”€ pages/              # Page components
+â”‚   â”œâ”€â”€ PortfolioPage.tsx
+â”‚   â””â”€â”€ ResumePage.tsx
+â”œâ”€â”€ config/             # Configuration files
+â”‚   â””â”€â”€ portfolioData.ts
+â”œâ”€â”€ context/            # React contexts (Theme)
+â”œâ”€â”€ types/              # TypeScript type definitions
+â””â”€â”€ assets/             # Static assets
 ```
 
-## 🚀 Getting Started
+## ðŸš€ Getting Started
 
 ### Prerequisites
 
@@ -119,7 +119,7 @@ src/
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/satya00089/portfolio.git
+git clone https://github.com/pratik-70/portfolio.git
 cd portfolio
 ```
 
@@ -137,7 +137,7 @@ npm run dev
 
 4. Open your browser and navigate to `http://localhost:5173`
 
-## 📝 Available Scripts
+## ðŸ“ Available Scripts
 
 - `npm run dev` - Start development server
 - `npm run build` - Build for production
@@ -145,7 +145,7 @@ npm run dev
 - `npm run lint` - Run ESLint
 - `npm run deploy` - Deploy to GitHub Pages
 
-## 🎨 Customization
+## ðŸŽ¨ Customization
 
 ### Update Portfolio Data
 
@@ -165,7 +165,7 @@ Theme configuration is managed through `src/context/ThemeContext.ts` and `src/co
 
 Tailwind configuration can be modified in `tailwind.config.js`.
 
-## 🌐 Deployment
+## ðŸŒ Deployment
 
 This project is configured for deployment to GitHub Pages:
 
@@ -177,21 +177,21 @@ This project is configured for deployment to GitHub Pages:
 npm run deploy
 ```
 
-## 📄 License
+## ðŸ“„ License
 
 This project is open source and available under the [MIT License](LICENSE).
 
-## 👤 Author
+## ðŸ‘¤ Author
 
-**Satya Subudhi**
+**Pratik Kumar**
 
-- GitHub: [@satya00089](https://github.com/satya00089)
-- Email: satyasubudhi089@gmail.com
+- GitHub: [@pratik-70](https://github.com/pratik-70)
+- Email: 70812345pratik@gmail.com
 
-## 🤝 Contributing
+## ðŸ¤ Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/satya00089/portfolio/issues).
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/pratik-70/portfolio/issues).
 
 ---
 
-Built with ❤️ using React + TypeScript + Vite
+Built with â¤ï¸ using React + TypeScript + Vite

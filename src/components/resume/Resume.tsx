@@ -15,7 +15,7 @@ export const Resume: React.FC<{ className?: string }> = ({
   const resumeInfo: Portfolio = PORTFOLIO_INFO;
 
   const personal = resumeInfo.personal ?? {
-    name: "Your Name",
+    name: "Pratik Kumar",
     title: "",
     headline: "",
     avatar: undefined,
@@ -176,11 +176,6 @@ export const Resume: React.FC<{ className?: string }> = ({
                       className="px-2 py-1 rounded-md bg-[var(--surface)] border border-[var(--border)] text-[var(--text)]"
                     >
                       {s.name}
-                      {s.years ? (
-                        <span className="ml-2 text-xs text-[var(--muted)]">
-                          · {s.years}y
-                        </span>
-                      ) : null}
                       {s.level ? (
                         <span className="ml-1 text-xs text-[var(--muted)]">
                           · {s.level}
@@ -379,7 +374,7 @@ export const Resume: React.FC<{ className?: string }> = ({
           </div>
           <div className="flex items-center gap-3">
             <a
-              href={meta.pdf ?? "/resume.pdf"}
+              href={meta.pdf ?? `${import.meta.env.BASE_URL}resume.pdf`}
               className="inline-flex items-center gap-2 text-sm underline"
               download
             >

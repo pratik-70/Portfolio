@@ -12,6 +12,50 @@ const ReactMarkdown = React.lazy(() => import("react-markdown"));
 
 import "github-markdown-css/github-markdown-light.css";
 
+const toThreeBullets = (description?: string): string[] => {
+  const text = (description ?? "").replace(/\s+/g, " ").trim();
+  if (!text) return [];
+
+  const sentenceParts = text
+    .split(/[.!?]+\s*/)
+    .map((part) => part.trim())
+    .filter(Boolean);
+
+  const clauseParts = text
+    .split(/[;,]+\s*/)
+    .map((part) => part.trim())
+    .filter(Boolean);
+
+  const baseParts = sentenceParts.length >= 3 ? sentenceParts : clauseParts;
+  const uniqueParts: string[] = [];
+
+  for (const part of baseParts) {
+    if (uniqueParts.length === 3) break;
+    if (!uniqueParts.some((p) => p.toLowerCase() === part.toLowerCase())) {
+      uniqueParts.push(part);
+    }
+  }
+
+  if (uniqueParts.length === 3) return uniqueParts;
+
+  const words = text.split(" ").filter(Boolean);
+  if (words.length === 0) return uniqueParts;
+
+  while (uniqueParts.length < 3) {
+    const idx = uniqueParts.length;
+    const start = Math.floor((idx * words.length) / 3);
+    const end = Math.floor(((idx + 1) * words.length) / 3);
+    const chunk = words.slice(start, Math.max(end, start + 1)).join(" ").trim();
+    if (chunk && !uniqueParts.includes(chunk)) {
+      uniqueParts.push(chunk);
+    } else {
+      break;
+    }
+  }
+
+  return uniqueParts.slice(0, 3);
+};
+
 export const ProjectModal: React.FC<{
   project: Project | null;
   open: boolean;
@@ -30,6 +74,7 @@ export const ProjectModal: React.FC<{
   const { scrollYProgress } = useScroll({ container: bodyRef });
 
   const FaLink = FaIcons["FaLink" as keyof typeof FaIcons];
+  const descriptionBullets = toThreeBullets(project?.description);
 
   // Reset state when modal opens
   useEffect(() => {
@@ -183,20 +228,36 @@ export const ProjectModal: React.FC<{
                       transition={{ duration: 0.3 }}
                     >
                       {/* Project image */}
-                      {project.image && (
-                        <img
-                          src={project.image}
-                          alt={project.title}
-                          className="rounded-lg border border-[var(--border)] mb-4 w-full h-auto object-cover max-h-60"
-                        />
-                      )}
+                      {(project.video || project.image) &&
+                        (project.video ? (
+                          <video
+                            src={project.video}
+                            poster={project.image}
+                            className="rounded-lg border border-[var(--border)] mb-4 w-full h-auto object-cover max-h-60"
+                            controls
+                            playsInline
+                            preload="metadata"
+                          />
+                        ) : (
+                          <img
+                            src={project.image}
+                            alt={project.title}
+                            className="rounded-lg border border-[var(--border)] mb-4 w-full h-auto object-cover max-h-60"
+                          />
+                        ))}
                       {/* Description */}
-                      <p className="text-sm text-[var(--text)] mb-4">
-                        {project.description}
-                      </p>
+                      {descriptionBullets.length > 0 && (
+                        <ul className="text-sm text-[var(--text)] mb-4 list-disc list-inside space-y-1">
+                          {descriptionBullets.map((bullet, idx) => (
+                            <li key={`${project.id ?? project.title}-desc-${idx}`}>
+                              {bullet}
+                            </li>
+                          ))}
+                        </ul>
+                      )}
 
                       {/* Links */}
-                      {project.links && project.links.length > 0 && (
+                      {(project.href || (project.links && project.links.length > 0)) && (
                         <div className="flex gap-3 flex-wrap mb-4">
                           {project.href && (
                             <a
@@ -208,7 +269,7 @@ export const ProjectModal: React.FC<{
                               {FaLink && <FaLink className="w-4 h-4" />} Demo
                             </a>
                           )}
-                          {project.links.map((link) => {
+                          {(project.links ?? []).map((link) => {
                             const Icon =
                               SiIcons[link.icon as keyof typeof SiIcons] ??
                               FaIcons[link.icon as keyof typeof FaIcons];

@@ -2,13 +2,32 @@ import React, { useState, useMemo, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import type { SkillGroup } from "../types/portfolio";
 import * as SiIcons from "react-icons/si";
-import { SkillCircle } from "./SkillCircle";
 import { FaChevronUp, FaChevronDown } from "react-icons/fa6";
+
+const SKILL_ICON_COLORS: Record<string, string> = {
+  SiHtml5: "#E34F26",
+  SiCss3: "#1572B6",
+  SiJavascript: "#F7DF1E",
+  SiNodedotjs: "#339933",
+  SiExpress: "#000000",
+  SiJava: "#007396",
+  SiPython: "#3776AB",
+  SiDocker: "#2496ED",
+  SiKubernetes: "#326CE5",
+  SiJenkins: "#D24939",
+  SiTerraform: "#7B42BC",
+  SiAmazonaws: "#FF9900",
+  SiMongodb: "#47A248",
+  SiMysql: "#4479A1",
+  SiGit: "#F05032",
+  SiGithub: "#181717",
+  SiGitlab: "#FC6D26",
+};
 
 export const SkillsList: React.FC<{
   skills?: SkillGroup[];
   isBar?: boolean;
-}> = ({ skills = [], isBar = true }) => {
+}> = ({ skills = [] }) => {
   const groupTitles = useMemo(
     () => skills.map((g) => g.title ?? "Other"),
     [skills],
@@ -46,7 +65,7 @@ export const SkillsList: React.FC<{
   };
 
   // collapse sizing
-  const rowHeight = 140;
+  const rowHeight = 120;
   const maxRowsCollapsed = 3;
   const collapsedPx = rowHeight * maxRowsCollapsed;
   const maxHeight = `${collapsedPx}px`;
@@ -81,7 +100,7 @@ export const SkillsList: React.FC<{
 
   return (
     <div className="space-y-6">
-      <div className="flex flex-wrap gap-2">
+      <div className="flex flex-wrap justify-center gap-2">
         <button
           onClick={() => toggleTitle("all")}
           onKeyDown={(e) => {
@@ -151,61 +170,45 @@ export const SkillsList: React.FC<{
               >
                 <h3
                   id={`skills-${groupTitle}`}
-                  className="text-sm font-semibold text-[var(--brand)] mb-3"
+                  className="text-sm font-semibold text-[var(--brand)] mb-3 text-center"
                 >
                   {groupTitle}
                 </h3>
 
-                <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-6 gap-4">
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6 gap-5">
                   {groupSkills.map((s) => {
                     const Icon = SiIcons[s.icon as keyof typeof SiIcons];
+                    const iconColor = s.icon
+                      ? SKILL_ICON_COLORS[s.icon] ?? "var(--brand)"
+                      : "var(--brand)";
                     return (
-                      <motion.fieldset
+                      <motion.div
                         key={s.name}
                         whileHover={{ y: -6 }}
-                        className="p-4 rounded-xl bg-[var(--surface)] border border-[var(--border)] transition duration-300 cursor-default text-[var(--muted)] hover:text-[var(--text)]"
+                        className="flex flex-col items-center gap-2 transition duration-300 cursor-default text-[var(--muted)] hover:text-[var(--text)] text-center"
                       >
-                        <div className="flex items-start justify-between gap-3">
-                          <div>
-                            <div className="font-medium text-sm">{s.name}</div>
-                            <div className="text-xs text-slate-400 mt-1">
-                              {s.years
-                                ? `${s.years} yr${s.years > 1 ? "s" : ""}`
-                                : null}
-                              {s.note ? (
-                                <span className="ml-2">• {s.note}</span>
-                              ) : null}
-                            </div>
-                          </div>
-
-                          {Icon && (
-                            <div className="flex items-center shrink-0">
-                              <Icon className="w-6 h-6 text-[var(--muted)]" />
-                            </div>
+                        <div className="w-16 h-16 rounded-full border border-[var(--border)] bg-[var(--surface)] flex items-center justify-center shadow-sm">
+                          {Icon ? (
+                            <Icon
+                              className="w-8 h-8"
+                              style={{ color: iconColor }}
+                            />
+                          ) : (
+                            <span className="text-lg font-semibold text-[var(--brand)]">
+                              {s.name.charAt(0)}
+                            </span>
                           )}
                         </div>
 
-                        {s.level != null && isBar && (
-                          <div className="mt-3 bg-[var(--border)]/40 h-2 rounded-full overflow-hidden">
-                            <motion.div
-                              initial={{ width: 0 }}
-                              animate={{ width: `${s.level}%` }}
-                              transition={{ duration: 0.8 }}
-                              className="h-2 rounded-full"
-                              style={{
-                                background:
-                                  "linear-gradient(90deg, var(--brand), var(--accent))",
-                              }}
-                            />
-                          </div>
-                        )}
-
-                        {s.level != null && !isBar && (
-                          <div className="mt-3 mx-auto w-24 h-24 sm:w-32 sm:h-32">
-                            <SkillCircle level={s.level} />
-                          </div>
-                        )}
-                      </motion.fieldset>
+                        <div>
+                          <div className="font-medium text-sm">{s.name}</div>
+                          {s.note ? (
+                            <div className="text-xs text-[var(--muted)] mt-1">
+                              {s.note}
+                            </div>
+                          ) : null}
+                        </div>
+                      </motion.div>
                     );
                   })}
                 </div>
