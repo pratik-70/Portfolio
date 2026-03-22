@@ -138,9 +138,9 @@ export const About: React.FC = () => {
             </div>
           </div>
 
-          <div className="hidden md:flex md:col-span-5 items-center justify-center">
+          <div className="col-span-1 md:col-span-5 flex items-center justify-center mt-8 md:mt-0">
             <div className="group relative [perspective:900px] cursor-zoom-in">
-              <div className="relative w-80 h-96 rounded-3xl p-[3px] shadow-[0_16px_40px_rgba(0,0,0,0.35)] transition-transform duration-300 [transform:rotateX(6deg)_rotateY(-8deg)] group-hover:[transform:rotateX(3deg)_rotateY(-3deg)_translateY(-4px)] overflow-hidden">
+              <div className="relative w-48 h-56 md:w-80 md:h-96 rounded-3xl p-[3px] shadow-[0_16px_40px_rgba(0,0,0,0.35)] transition-transform duration-300 [transform:rotateX(6deg)_rotateY(-8deg)] group-hover:[transform:rotateX(3deg)_rotateY(-3deg)_translateY(-4px)] overflow-hidden">
                 <motion.div
                   aria-hidden="true"
                   className="absolute -inset-[110%] bg-[conic-gradient(from_0deg,rgba(24,204,252,0),rgba(24,204,252,0.95),rgba(99,68,245,0.9),rgba(174,72,255,0.95),rgba(24,204,252,0))]"
