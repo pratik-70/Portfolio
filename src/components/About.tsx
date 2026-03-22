@@ -138,7 +138,7 @@ export const About: React.FC = () => {
             </div>
           </div>
 
-          <div className="md:col-span-5 flex items-center justify-center">
+          <div className="hidden md:flex md:col-span-5 items-center justify-center">
             <div className="group relative [perspective:900px] cursor-zoom-in">
               <div className="relative w-80 h-96 rounded-3xl p-[3px] shadow-[0_16px_40px_rgba(0,0,0,0.35)] transition-transform duration-300 [transform:rotateX(6deg)_rotateY(-8deg)] group-hover:[transform:rotateX(3deg)_rotateY(-3deg)_translateY(-4px)] overflow-hidden">
                 <motion.div

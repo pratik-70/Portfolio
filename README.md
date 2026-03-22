@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS. Features an interactive project showcase, skills visualization, CLI-style resume, and smooth animations.
 
-ðŸ”— **Live Demo**: [https://pratik-70.github.io/portfolio](https://pratik-70.github.io/portfolio)
+ðŸ”— **Live Demo**: [https://pratik-70.github.io/Portfolio](https://pratik-70.github.io/Portfolio)
 
 > Free, modern developer portfolio template with:
 >

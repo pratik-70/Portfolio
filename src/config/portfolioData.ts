@@ -6,7 +6,7 @@ export const PORTFOLIO_INFO: Portfolio = {
   meta: {
     createdAt: new Date().toISOString(),
     locale: "en-US",
-    url: "https://pratik-70.github.io/portfolio",
+    url: "https://pratik-70.github.io/Portfolio",
     pdf: `${PROJECT_IMAGE_BASE}resume.pdf`,
   },
   personal: {
@@ -29,7 +29,7 @@ export const PORTFOLIO_INFO: Portfolio = {
       email: "70812345pratik@gmail.com",
       phone: "+91-9431880420",
       location: "Phagwara, Punjab, India",
-      website: "https://pratik-70.github.io/portfolio",
+      website: "https://pratik-70.github.io/Portfolio",
       socials: [
         {
           label: "LinkedIn",
