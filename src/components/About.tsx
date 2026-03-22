@@ -76,16 +76,16 @@ export const About: React.FC = () => {
 
   return (
     <section className="md:col-span-2">
-      <div className="max-w-7xl mx-auto px-6 py-20">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+      <div className="max-w-7xl mx-auto px-4 py-12 md:px-6 md:py-20">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 items-center">
           <div className="md:col-span-7">
-            <div className="panel-translucent p-6 md:p-8 rounded-2xl">
+            <div className="panel-translucent p-4 md:p-8 rounded-2xl">
               <h1 className="text-[clamp(2.25rem,6vw,5.5rem)] font-extrabold leading-[1.05] whitespace-nowrap max-w-full">
                 {name}
               </h1>
 
               {titleText && (
-                <div className="mt-3 text-base text-muted-foreground">
+                <div className="mt-2 md:mt-3 text-sm md:text-base text-muted-foreground">
                   {titleText.includes(highlightLabel) ? (
                     <>
                       {titleText.split(highlightLabel)[0]}
@@ -102,11 +102,11 @@ export const About: React.FC = () => {
                 </div>
               )}
 
-              <p className="mt-6 text-lg text-muted-foreground max-w-2xl whitespace-pre-line">
+              <p className="mt-3 md:mt-6 text-base md:text-lg text-muted-foreground max-w-2xl whitespace-pre-line">
                 {heroSummary}
               </p>
 
-              <div className="mt-6 flex flex-wrap gap-3">
+              <div className="mt-3 md:mt-6 flex flex-wrap gap-2 md:gap-3">
                 <span className="inline-flex items-center rounded-full border border-[var(--border)] bg-[var(--surface)] px-3 py-1 text-xs text-[var(--text)]">
                   {location}
                 </span>
@@ -116,10 +116,10 @@ export const About: React.FC = () => {
                 </span>
               </div>
 
-              <div className="mt-8 flex flex-wrap gap-3">
+              <div className="mt-4 md:mt-8 flex flex-wrap gap-2 md:gap-3">
                 <a
                   href="#projects"
-                  className="inline-flex items-center gap-2 rounded-md bg-foreground text-background px-5 py-3 text-sm font-semibold shadow-lg hover:opacity-95"
+                  className="inline-flex items-center gap-2 rounded-md bg-foreground text-background px-4 md:px-5 py-2 md:py-3 text-xs md:text-sm font-semibold shadow-lg hover:opacity-95"
                   onClick={(e) => onNavClick(e, "#projects")}
                   onKeyDown={(e) => handleKeyActivation(e, "#projects")}
                 >
@@ -128,7 +128,7 @@ export const About: React.FC = () => {
 
                 <a
                   href={resumePdf}
-                  className="inline-flex items-center gap-2 rounded-md border border-border px-4 py-3 text-sm font-semibold text-foreground hover:bg-muted"
+                  className="inline-flex items-center gap-2 rounded-md border border-border px-3 md:px-4 py-2 md:py-3 text-xs md:text-sm font-semibold text-foreground hover:bg-muted"
                   onKeyDown={(e) => handleKeyActivation(e, resumePdf)}
                   download
                 >
@@ -138,7 +138,7 @@ export const About: React.FC = () => {
             </div>
           </div>
 
-          <div className="col-span-1 md:col-span-5 flex items-center justify-center mt-8 md:mt-0">
+          <div className="col-span-1 md:col-span-5 flex items-center justify-center mt-4 md:mt-0">
             <div className="group relative [perspective:900px] cursor-zoom-in">
               <div className="relative w-48 h-56 md:w-80 md:h-96 rounded-3xl p-[3px] shadow-[0_16px_40px_rgba(0,0,0,0.35)] transition-transform duration-300 [transform:rotateX(6deg)_rotateY(-8deg)] group-hover:[transform:rotateX(3deg)_rotateY(-3deg)_translateY(-4px)] overflow-hidden">
                 <motion.div
