@@ -14,7 +14,7 @@ export const PORTFOLIO_INFO: Portfolio = {
     title: "DevOps and Cloud Engineer",
     headline: "JavaScript | Node.js | MERN Stack | Docker | Kubernetes | Terraform",
     avatar: {
-      url: `${PROJECT_IMAGE_BASE}Profile.jpeg`,
+      url: `${PROJECT_IMAGE_BASE}projects/profile.jpeg`,
       label: "Pratik Kumar",
     },
     summary:
